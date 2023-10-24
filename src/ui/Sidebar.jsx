@@ -16,16 +16,14 @@ const StyledSidebar = styled.aside`
   grid-template-rows: 3.2rem repeat(4, min-content) 1fr;
 
   @media (max-width: 950px) {
-    height: min-content;
+    display: flex;
+    align-items: center;
+    height: max-content;
     grid-row: 1 / 2;
     padding: ${() => clampBuilder(350, 950, 1, 1.5)}
       ${() => clampBuilder(350, 950, 1.2, 2)};
 
-    display: flex;
-
     justify-content: space-between;
-
-    align-items: center;
   }
 `;
 

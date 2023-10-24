@@ -9,6 +9,10 @@ const StyledImage = styled.img`
   align-self: end;
   justify-self: center;
   border: 2px solid var(--color-white);
+
+  @media (max-width: 950px) {
+    margin-block: auto;
+  }
 `;
 
 function Avatar() {

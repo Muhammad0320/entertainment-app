@@ -15,11 +15,11 @@ const NavList = styled.ul`
   display: flex;
   flex-direction: column;
   row-gap: 3rem;
-
   @media (max-width: 950px) {
+    margin-top: 0;
     flex-direction: row;
-
-    column-gap: ${() => clampBuilder(350, 1200, 2, 3)};
+    align-items: center;
+    column-gap: ${() => clampBuilder(350, 1200, 3, 4)};
   }
 `;
 
