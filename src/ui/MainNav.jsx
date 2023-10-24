@@ -14,7 +14,13 @@ const NavList = styled.ul`
   margin-top: ${() => clampBuilder(950, 1200, 5, 7)};
   display: flex;
   flex-direction: column;
-  gap: 3rem;
+  row-gap: 3rem;
+
+  @media (max-width: 950px) {
+    flex-direction: row;
+
+    column-gap: ${() => clampBuilder(350, 1200, 2, 3)};
+  }
 `;
 
 const StyledNavLink = styled(NavLink)`

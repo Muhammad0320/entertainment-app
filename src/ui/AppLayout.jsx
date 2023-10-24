@@ -1,15 +1,24 @@
 import { styled } from "styled-components";
 import Sidebar from "./Sidebar";
 import { Outlet } from "react-router-dom";
+import { clampBuilder } from "../Styles/clampBuilder";
 
 const StyledApp = styled.div`
   min-height: 100dvh;
   padding: 4rem;
+  padding-inline-end: 0;
   display: grid;
   grid-template-columns: 10rem 1fr;
-  grid-template-rows: 6rem 1fr;
-  row-gap: 2rem;
-  column-gap: 3.5rem;
+
+  column-gap: ${() => clampBuilder(350, 950, 2.5, 3.5)};
+
+  @media (max-width: 950px) {
+    grid-template-columns: none;
+
+    row-gap: ${() => clampBuilder(350, 950, 1.5, 3)};
+
+    grid-template-rows: 6rem 1fr;
+  }
 `;
 
 const StyledMain = styled.main`

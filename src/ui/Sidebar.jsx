@@ -16,7 +16,7 @@ const StyledSidebar = styled.aside`
   grid-template-rows: 3.2rem repeat(4, min-content) 1fr;
 
   @media (max-width: 950px) {
-    height: auto;
+    height: min-content;
 
     padding: ${() => clampBuilder(350, 950, 1, 1.5)}
       ${() => clampBuilder(350, 950, 1.2, 2)};
