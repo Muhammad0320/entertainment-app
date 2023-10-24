@@ -51,7 +51,7 @@ const Figure = styled.figure`
   grid-template-columns: repeat(2, 1fr);
 
   &:hover img {
-    filter: brightness(80%);
+    filter: brightness(75%);
   }
 
   &:hover figcaption {
