@@ -160,6 +160,13 @@ const MovieName = styled.div`
     `}
 `;
 
+const CantegoryIconContainer = styled.p`
+  display: flex;
+  justify-content: space-between;
+  column-gap: ${() => clampBuilder(350, 1200, 0.4, 1)};
+  align-items: center;
+`;
+
 function GridItem({ trend, data }) {
   const {
     title,
@@ -193,10 +200,10 @@ function GridItem({ trend, data }) {
       <MovieInfo trend={trend}>
         <MovieDetails trend={trend}>
           <p> {year} </p>
-          <p>
+          <CantegoryIconContainer>
             <SVG src={CategoryIcon} />
             <span> {category} </span>
-          </p>
+          </CantegoryIconContainer>
           <span> {rating} </span>
         </MovieDetails>
         <MovieName trend={trend}>{title}</MovieName>
