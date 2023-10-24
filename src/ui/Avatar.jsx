@@ -1,8 +1,9 @@
 import { styled } from "styled-components";
+import { clampBuilder } from "../Styles/clampBuilder";
 
 const StyledImage = styled.img`
-  width: 4rem;
-  height: 4rem;
+  width: ${() => clampBuilder(350, 1200, 2.5, 4)};
+  height: ${() => clampBuilder(350, 1200, 2.5, 4)};
   box-sizing: content-box;
   border-radius: 50%;
   grid-row: 4 / -1;
@@ -12,6 +13,7 @@ const StyledImage = styled.img`
 
   @media (max-width: 950px) {
     margin-block: auto;
+    border-width: 1px;
   }
 `;
 

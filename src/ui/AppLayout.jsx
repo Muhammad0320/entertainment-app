@@ -5,7 +5,7 @@ import { clampBuilder } from "../Styles/clampBuilder";
 
 const StyledApp = styled.div`
   min-height: 100dvh;
-  padding: 3rem;
+  /* padding: 3rem; */
   padding-inline-end: 0;
   display: grid;
   grid-template-columns: 10rem 1fr;
@@ -21,17 +21,21 @@ const StyledApp = styled.div`
 
     grid-template-rows: 5rem 1fr;
   }
+
+  @media (max-width: 500px) {
+    padding: 0;
+  }
 `;
 
 const StyledMain = styled.main`
-  padding: 2rem;
+  padding: 2.5rem;
   grid-column: 2 / -1;
   grid-row: 2 / -1;
   overflow: auto;
 
-  @media (max-width: 950px) {
+  /* @media (max-width: 950px) {
     padding: 0;
-  }
+  } */
 `;
 
 function AppLayout() {

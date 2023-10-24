@@ -6,6 +6,7 @@ import { clampBuilder } from "../Styles/clampBuilder";
 
 const StyledSidebar = styled.aside`
   text-align: center;
+
   grid-column: 1 / 2;
   border-radius: ${() => clampBuilder(350, 1200, 2, 2.5)};
   padding-block: ${() => clampBuilder(950, 1200, 2.5, 4)};
@@ -13,6 +14,9 @@ const StyledSidebar = styled.aside`
   background-color: var(--color-blue-dark);
   display: grid;
   grid-template-rows: 3.2rem repeat(4, min-content) 1fr;
+
+  margin: 2rem 0 0 2rem;
+  /* justify-content: center; */
 
   @media (max-width: 950px) {
     display: flex;
@@ -23,6 +27,11 @@ const StyledSidebar = styled.aside`
       ${() => clampBuilder(350, 950, 1.2, 2)};
 
     justify-content: space-between;
+  }
+
+  @media (max-width: 500px) {
+    margin: 0;
+    border-radius: 0;
   }
 `;
 
