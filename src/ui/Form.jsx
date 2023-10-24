@@ -2,9 +2,13 @@ import styled from "styled-components";
 import { clampBuilder } from "../Styles/clampBuilder";
 
 const Form = styled.form`
-  padding-block: ${() => clampBuilder(350, 1200, 2, 3)};
+  display: flex;
 
-  padding-inline: ${() => clampBuilder(350, 1200, 1.5, 2.5)};
+  flex-direction: column;
+
+  row-gap: ${() => clampBuilder(350, 1200, 1.5, 2.2)};
+
+  background-color: var(--color-primary);
 `;
 
 export default Form;

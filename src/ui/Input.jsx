@@ -1,7 +1,7 @@
 import { styled } from "styled-components";
 import { clampBuilder } from "../Styles/clampBuilder";
 
-const StyledInput = styled.input`
+const Input = styled.input`
   background-color: transparent;
 
   width: 80%;
@@ -27,11 +27,5 @@ const StyledInput = styled.input`
     border-bottom: 1px solid var(--color-blue-grey);
   }
 `;
-
-function Input({ placeholder, onChange, value }) {
-  return (
-    <StyledInput placeholder={placeholder} value={value} onChange={onChange} />
-  );
-}
 
 export default Input;
