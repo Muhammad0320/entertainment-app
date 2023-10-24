@@ -2,7 +2,7 @@ import { BrowserRouter, Navigate, Route, Routes } from "react-router-dom";
 
 import Home from "./pages/Home";
 import Login from "./pages/Login";
-import Movies from "./pages/Movies";
+import Movies from "./pages/MoviesPage";
 import Bookmark from "./pages/Bookmark";
 import AppLayout from "./ui/AppLayout";
 import SignUp from "./pages/SignUp";
