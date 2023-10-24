@@ -20,6 +20,10 @@ const TrendingContainer = styled.div`
   @media (max-width: 900px) {
     grid-auto-columns: 53%;
   }
+
+  @media (max-width: 500px) {
+    grid-auto-columns: 79%;
+  }
 `;
 
 function TrendingGridLayout() {

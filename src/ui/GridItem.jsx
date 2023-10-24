@@ -122,7 +122,7 @@ const MovieInfo = styled.div`
       grid-row: 1 / 2;
       grid-column: 1 / -1;
 
-      padding: 0.5rem;
+      /* padding: 0.5rem; */
       font-size: ${() => clampBuilder(350, 1200, 1, 2)};
       align-self: end;
       justify-self: start;
