@@ -42,7 +42,7 @@ function HomePage() {
         </Heading>
       </ContainerHomePage>
 
-      <StyledList layout="repeat(auto-fit, minmax(25rem, 1fr))">
+      <StyledList layout="repeat(auto-fill, minmax(25rem, 1fr))">
         {movieData.map((item) => (
           <GridItem data={item} key={item.title} />
         ))}
