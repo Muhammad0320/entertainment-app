@@ -11,6 +11,8 @@ const StyledForm = styled.div`
   padding-block: ${() => clampBuilder(350, 1200, 2, 3)};
   border-radius: ${() => clampBuilder(350, 1200, 1, 1.5)};
   padding-inline: ${() => clampBuilder(350, 1200, 1.5, 2.5)};
+
+  background-color: var(--color-blue-dark);
 `;
 
 function LoginForm() {

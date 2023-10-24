@@ -8,7 +8,7 @@ const StyledSidebar = styled.aside`
   text-align: center;
 
   grid-column: 1 / 2;
-  border-radius: ${() => clampBuilder(350, 1200, 2, 2.5)};
+  border-radius: ${() => clampBuilder(950, 1200, 1, 2)};
   padding-block: ${() => clampBuilder(950, 1200, 2.5, 4)};
   height: 95dvh;
   background-color: var(--color-blue-dark);

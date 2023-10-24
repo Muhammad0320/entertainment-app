@@ -8,7 +8,7 @@ const StyledLogin = styled.section`
 
   place-items: center;
 
-  background-color: var(--color-blue-dark);
+  background-color: var(--color-primary);
 `;
 
 function Login() {
