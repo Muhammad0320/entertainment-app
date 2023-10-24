@@ -8,17 +8,24 @@ import {
   BookmarkFull,
   BookmarkEmpty,
 } from "../icons/icons";
+import { clampBuilder } from "../Styles/clampBuilder";
 
 const StyledList = styled.li`
   display: grid;
   grid-template-columns: repeat(2, 1fr);
-  grid-template-rows: 1fr 6.5rem;
+  grid-template-rows: 1fr ${() => clampBuilder(350, 1200, 4.5, 6.5)};
   overflow: hidden;
+
+  ${(props) =>
+    props.trend === "trend" &&
+    css`
+      scroll-snap-align: start;
+    `}
 `;
 
 const Image = styled.img`
   width: 100%;
-  border-radius: 1.5rem;
+  border-radius: ${() => clampBuilder(350, 1200, 1, 1.5)};
   height: 100%;
   z-index: -1;
   display: block;
@@ -59,7 +66,7 @@ const FigCaption = styled.p`
   align-self: center;
   visibility: hidden;
 
-  border-radius: 3rem;
+  border-radius: ${() => clampBuilder(350, 1200, 1.5, 3)};
   display: flex;
   align-items: center;
   justify-content: center;
@@ -72,7 +79,7 @@ const FigCaption = styled.p`
 const Icon = styled.p`
   grid-column: 2 / -1;
   grid-row: 1 / 2;
-  padding: 1.6rem;
+  padding: ${() => clampBuilder(350, 1200, 1, 1.6)};
   margin: 1rem;
   background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3));
 
@@ -104,7 +111,7 @@ const MovieInfo = styled.div`
   justify-self: start;
 
   display: flex;
-  gap: 3rem;
+  gap: ${() => clampBuilder(350, 1200, 1.2, 3)};
   flex-direction: column;
 
   ${(props) =>
@@ -112,9 +119,9 @@ const MovieInfo = styled.div`
     css`
       grid-row: 1 / 2;
       grid-column: 1 / -1;
-      row-gap: 2.5rem;
+      row-gap: ${() => clampBuilder(350, 1200, 1.4, 2.5)};
       padding: 0.5rem;
-      font-size: 2rem;
+      font-size: ${() => clampBuilder(350, 1200, 1, 2)};
       align-self: end;
       justify-self: start;
     `}
@@ -126,20 +133,20 @@ const MovieDetails = styled.div`
   white-space: nowrap;
   column-gap: 1rem;
   font-weight: 200;
-  font-size: 1.3rem;
+  font-size: ${() => clampBuilder(350, 1200, 0.8, 1.3)};
   color: var(--color-white);
   opacity: 0.8;
 
   ${(props) =>
     props.trend === "trend" &&
     css`
-      font-size: 1.6rem;
+      font-size: ${() => clampBuilder(350, 1200, 1.2, 1.6)};
     `}
 `;
 
 const MovieName = styled.div`
   color: var(--color-white);
-  font-size: 2.2rem;
+  font-size: ${() => clampBuilder(350, 1200, 1.2, 2.2)};
   font-weight: 400;
   margin-top: -2.5rem;
   grid-column: 1 / -1;
@@ -147,7 +154,7 @@ const MovieName = styled.div`
   ${(props) =>
     props.trend === "trend" &&
     css`
-      font-size: 2.7rem;
+      font-size: ${() => clampBuilder(350, 1200, 1.5, 2.7)};
     `}
 `;
 
@@ -168,7 +175,7 @@ function GridItem({ trend, data }) {
   const BookmarkIcon = isBookmarked ? BookmarkFull : BookmarkEmpty;
 
   return (
-    <StyledList>
+    <StyledList trend={trend}>
       <Figure>
         <Image src={large} alt="Image of movie" trend={trend} />
         <FigCaption>
