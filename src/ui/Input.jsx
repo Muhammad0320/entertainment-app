@@ -5,7 +5,7 @@ const StyledInput = styled.input`
   background-color: transparent;
 
   width: 80%;
-  padding: 1rem 0;
+  padding-block-end: 1rem;
   font-size: ${() => clampBuilder(350, 1200, 1, 2.5)};
   caret-color: var(--color-red);
   font-weight: 300;

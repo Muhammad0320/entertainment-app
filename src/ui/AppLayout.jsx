@@ -30,6 +30,10 @@ const StyledMain = styled.main`
   grid-column: 2 / -1;
   grid-row: 2 / -1;
   overflow: auto;
+
+  @media (max-width: 950px) {
+    padding: 0;
+  }
 `;
 
 function AppLayout() {
