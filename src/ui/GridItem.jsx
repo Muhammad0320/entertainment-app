@@ -111,15 +111,17 @@ const MovieInfo = styled.div`
   justify-self: start;
 
   display: flex;
-  gap: ${() => clampBuilder(350, 1200, 1.2, 3)};
+
   flex-direction: column;
+
+  justify-content: space-between;
 
   ${(props) =>
     props.trend === "trend" &&
     css`
       grid-row: 1 / 2;
       grid-column: 1 / -1;
-      row-gap: ${() => clampBuilder(350, 1200, 1.4, 2.5)};
+
       padding: 0.5rem;
       font-size: ${() => clampBuilder(350, 1200, 1, 2)};
       align-self: end;
@@ -148,7 +150,7 @@ const MovieName = styled.div`
   color: var(--color-white);
   font-size: ${() => clampBuilder(350, 1200, 1.2, 2.2)};
   font-weight: 400;
-  margin-top: -2.5rem;
+  /* margin-top: -2.5rem; */
   grid-column: 1 / -1;
   line-height: 1;
   ${(props) =>
