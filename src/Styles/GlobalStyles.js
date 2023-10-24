@@ -40,6 +40,37 @@ body {
   font-size: 1.4rem;
 }
 
+::-webkit-scrollbar-track {
+
+  background-color: var(--color-blue-dark);
+
+  margin-block:1rem;
+
+
+  
+}
+
+::-webkit-scrollbar-thumb{
+  
+  background-color: var(--color-red);
+  border-radius: 2rem;
+
+  &:hover{
+
+
+    opacity: 0.5;
+
+} 
+}
+
+::-webkit-scrollbar{
+
+  height: 1.8rem;
+  width: 2rem;
+
+
+}
+
 input,
 button{
   font: inherit;
