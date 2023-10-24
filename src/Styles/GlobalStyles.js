@@ -5,6 +5,7 @@ const GlobalStyles = createGlobalStyle`
 :root {
 
     --color-red: #fc4747;
+    --color-red-light: #e56b6b;
     --color-primary: #10141e;
     --color-blue-grey: #5a698f;
     --color-white: #fff;
@@ -51,15 +52,17 @@ body {
 }
 
 ::-webkit-scrollbar-thumb{
+
+  
   
   background-color: var(--color-red);
   border-radius: 2rem;
+  
 
   &:hover{
 
 
-    opacity: 0.5;
-
+    background-color: var(--color-red-light);
 } 
 }
 
