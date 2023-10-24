@@ -23,7 +23,7 @@ function SignupForm() {
 
   return (
     <FormContainer>
-      <Heading> Login </Heading>
+      <Heading> Create Account </Heading>
 
       <Form onSubmit={handleSubmit(onSubmit)}>
         <FormRow error={errors?.email?.message}>
@@ -72,7 +72,7 @@ function SignupForm() {
 
         <Button variation="auth"> Create a new account </Button>
 
-        <AlternativeAuthentication method="Signup" />
+        <AlternativeAuthentication method="Login" />
       </Form>
     </FormContainer>
   );

@@ -57,7 +57,7 @@ function LoginForm() {
 
         <Button variation="auth"> Login to your account </Button>
 
-        <AlternativeAuthentication method="Login" />
+        <AlternativeAuthentication method="Signup" />
       </Form>
     </FormContainer>
   );
