@@ -17,6 +17,10 @@ const StyledApp = styled.div`
 
     row-gap: ${() => clampBuilder(350, 950, 1.5, 3)};
 
+    padding-inline: ${() => clampBuilder(350, 950, 1.5, 2.5)};
+
+    padding-block: ${() => clampBuilder(350, 1200, 1, 2)};
+
     grid-template-rows: 5rem 1fr;
   }
 `;

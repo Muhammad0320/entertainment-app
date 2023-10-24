@@ -1,11 +1,12 @@
 import { styled } from "styled-components";
+import { clampBuilder } from "../Styles/clampBuilder";
 
 const StyledInput = styled.input`
   background-color: transparent;
 
   width: 80%;
   padding: 1rem 0;
-  font-size: 2.4rem;
+  font-size: ${() => clampBuilder(350, 1200, 1, 2.5)};
   caret-color: var(--color-red);
   font-weight: 300;
   color: var(--color-white);
@@ -13,15 +14,15 @@ const StyledInput = styled.input`
   border: none;
 
   &::-webkit-input-placeholder {
-    font-size: 2rem;
+    font-size: ${() => clampBuilder(350, 1200, 1.5, 2.5)};
     opacity: 0.5;
     color: var(--color-white);
-    font-size: 2.5rem;
+    font-size: ${() => clampBuilder(350, 1200, 1.5, 2.5)};
     font-weight: 100;
   }
 
   &:focus {
-    outline: none;
+    outline: transparent;
 
     border-bottom: 1px solid var(--color-blue-grey);
   }
