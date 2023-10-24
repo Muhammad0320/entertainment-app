@@ -19,6 +19,8 @@ const StyledForm = styled.div`
 function LoginForm() {
   const { register, formState, reset, handleSubmit } = useForm();
 
+  const { errors } = formState;
+
   const onSubmit = () => {
     reset();
   };
@@ -28,7 +30,7 @@ function LoginForm() {
       <Heading> Login </Heading>
 
       <Form onSubmit={handleSubmit(onSubmit)}>
-        <FormRow>
+        <FormRow error={errors?.email?.message}>
           <Input
             placeholder="Email address"
             {...register("email", {
@@ -42,7 +44,7 @@ function LoginForm() {
           />
         </FormRow>
 
-        <FormRow>
+        <FormRow error={errors?.password?.message}>
           <Input
             placeholder="••••••••"
             {...register("password", {
