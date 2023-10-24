@@ -2,17 +2,31 @@ import { styled } from "styled-components";
 import MainNav from "./MainNav";
 import Logo from "./Logo";
 import Avatar from "./Avatar";
+import { clampBuilder } from "../Styles/clampBuilder";
 
 const StyledSidebar = styled.aside`
   grid-row: 1 / -1;
   text-align: center;
   grid-column: 1 / 2;
   border-radius: 2.5rem;
-  padding: 4rem 0;
+  padding-block: ${() => clampBuilder(950, 1200, 2.5, 4)};
   height: 100dvh;
   background-color: var(--color-blue-dark);
   display: grid;
   grid-template-rows: 3.2rem repeat(4, min-content) 1fr;
+
+  @media (max-width: 950px) {
+    height: auto;
+
+    padding: ${() => clampBuilder(350, 950, 1, 1.5)}
+      ${() => clampBuilder(350, 950, 1.2, 2)};
+
+    display: flex;
+
+    justify-content: space-between;
+
+    align-items: center;
+  }
 `;
 
 function Sidebar() {
