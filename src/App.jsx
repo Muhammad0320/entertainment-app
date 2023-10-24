@@ -1,11 +1,11 @@
 import { BrowserRouter, Navigate, Route, Routes } from "react-router-dom";
 
 import Home from "./pages/Home";
-import Login from "./pages/Login";
+import Login from "./pages/Login.jsx";
 import Movies from "./pages/MoviesPage";
 import Bookmark from "./pages/Bookmark";
 import AppLayout from "./ui/AppLayout";
-import SignUp from "./pages/SignUp";
+import Signup from "./pages/Signup";
 import PageNotFound from "./pages/PageNotFound";
 import GlobalStyles from "./Styles/GlobalStyles";
 import TVSeries from "./pages/TVSeries";
@@ -26,7 +26,7 @@ function App() {
           </Route>
 
           <Route path="login" element={<Login />} />
-          <Route path="sign-up" element={<SignUp />} />
+          <Route path="signup" element={<Signup />} />
           <Route path="*" element={<PageNotFound />} />
         </Routes>
       </BrowserRouter>
