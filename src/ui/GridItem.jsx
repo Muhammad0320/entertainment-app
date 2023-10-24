@@ -26,7 +26,7 @@ const StyledList = styled.li`
 const Image = styled.img`
   width: 100%;
   border-radius: ${() => clampBuilder(350, 1200, 1, 1.5)};
-  height: 100%;
+
   z-index: -1;
   display: block;
   object-fit: cover;
