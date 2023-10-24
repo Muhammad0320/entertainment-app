@@ -7,6 +7,12 @@ import Header from "../ui/Header";
 import TrendingGridLayout from "../ui/TrendingGridLayout";
 import { useState } from "react";
 import data from "../ui/Test";
+import styled from "styled-components";
+import { clampBuilder } from "../Styles/clampBuilder";
+
+const ContainerHomePage = styled.div`
+  margin-block-start: ${() => clampBuilder(350, 1200, 3, 4.5)};
+`;
 
 function HomePage() {
   const [searchQuery, setSearchQuery] = useState("");
@@ -27,12 +33,14 @@ function HomePage() {
 
       {!searchQuery && <TrendingGridLayout />}
 
-      <Heading>
-        {" "}
-        {searchQuery
-          ? `Found ${movieData.length} for '${searchQuery}' `
-          : "Recommended for you"}{" "}
-      </Heading>
+      <ContainerHomePage>
+        <Heading>
+          {" "}
+          {searchQuery
+            ? `Found ${movieData.length} for '${searchQuery}' `
+            : "Recommended for you"}{" "}
+        </Heading>
+      </ContainerHomePage>
 
       <StyledList layout="repeat(auto-fit, minmax(25rem, 1fr))">
         {movieData.map((item) => (
