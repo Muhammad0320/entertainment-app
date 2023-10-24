@@ -7,16 +7,20 @@ const StyledFormRow = styled.div`
   justify-content: space-between;
   padding: 0 0 0 2rem;
 
-  /* width: 70%; */
   border-bottom: 1px solid rgba(255, 255, 255, 0.5);
 
   &:has(input) {
     border-bottom: 3px solid var(--color-white);
   }
+
+  &:has(span) {
+    border-bottom: 2px solid var(--color-red);
+  }
 `;
 
-const Error = styled.div`
+const Error = styled.span`
   display: flex;
+
   align-items: center;
   line-height: 1;
   column-gap: ${() => clampBuilder(950, 1200, 0.7, 1)};
