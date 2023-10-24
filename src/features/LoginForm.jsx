@@ -1,5 +1,3 @@
-import styled from "styled-components";
-import { clampBuilder } from "../Styles/clampBuilder";
 import Heading from "../ui/Heading";
 import Form from "../ui/Form";
 import FormRow from "../ui/FormRow";
@@ -7,16 +5,7 @@ import Input from "../ui/Input";
 import Button from "../ui/Button";
 import AlternativeAuthentication from "../ui/AlternativeAuthentication";
 import { useForm } from "react-hook-form";
-
-const StyledForm = styled.div`
-  padding-block: ${() => clampBuilder(350, 1200, 2, 3)};
-  border-radius: ${() => clampBuilder(350, 1200, 1, 1.5)};
-  padding-inline: ${() => clampBuilder(350, 1200, 1.5, 2.5)};
-
-  background-color: var(--color-blue-dark);
-
-  width: ${() => clampBuilder(350, 1200, 25, 45)};
-`;
+import { FormContainer } from "../ui/FormContainer";
 
 function LoginForm() {
   const { register, formState, reset, handleSubmit } = useForm();
@@ -28,7 +17,7 @@ function LoginForm() {
   };
 
   return (
-    <StyledForm>
+    <FormContainer>
       <Heading> Login </Heading>
 
       <Form onSubmit={handleSubmit(onSubmit)}>
@@ -65,7 +54,7 @@ function LoginForm() {
 
         <AlternativeAuthentication method="Login" />
       </Form>
-    </StyledForm>
+    </FormContainer>
   );
 }
 
