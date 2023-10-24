@@ -7,8 +7,6 @@ const Form = styled.form`
   flex-direction: column;
 
   row-gap: ${() => clampBuilder(350, 1200, 1.5, 2.2)};
-
-  background-color: var(--color-primary);
 `;
 
 export default Form;

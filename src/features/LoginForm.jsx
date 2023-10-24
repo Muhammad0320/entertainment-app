@@ -26,10 +26,10 @@ function LoginForm() {
         </FormRow>
 
         <FormRow>
-          <Input placeholder="Password" />
+          <Input placeholder="••••••••" />
         </FormRow>
 
-        <Button> Login to your account </Button>
+        <Button variation="auth"> Login to your account </Button>
 
         <AlternativeAuthentication method="Login" />
       </Form>
