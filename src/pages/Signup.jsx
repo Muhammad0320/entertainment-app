@@ -1,5 +1,12 @@
+import SignupForm from "../features/SignupForm";
+import { AuthContainer } from "../ui/AuthContainer";
+
 function Signup() {
-  return <div>The signup page</div>;
+  return (
+    <AuthContainer>
+      <SignupForm />
+    </AuthContainer>
+  );
 }
 
 export default Signup;
