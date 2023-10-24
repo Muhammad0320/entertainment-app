@@ -1,4 +1,4 @@
-const data = [
+const data = [ 
   {
     title: "Beyond Earth",
     thumbnail: {
