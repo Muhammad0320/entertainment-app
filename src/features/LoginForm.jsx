@@ -6,6 +6,7 @@ import FormRow from "../ui/FormRow";
 import Input from "../ui/Input";
 import Button from "../ui/Button";
 import AlternativeAuthentication from "../ui/AlternativeAuthentication";
+import { useForm } from "react-hook-form";
 
 const StyledForm = styled.div`
   padding-block: ${() => clampBuilder(350, 1200, 2, 3)};
@@ -16,17 +17,42 @@ const StyledForm = styled.div`
 `;
 
 function LoginForm() {
+  const { register, formState, reset, handleSubmit } = useForm();
+
+  const onSubmit = () => {
+    reset();
+  };
+
   return (
     <StyledForm>
       <Heading> Login </Heading>
 
-      <Form>
+      <Form onSubmit={handleSubmit(onSubmit)}>
         <FormRow>
-          <Input placeholder="Email address" />
+          <Input
+            placeholder="Email address"
+            {...register("email", {
+              required: "This field is required",
+              pattern: {
+                value:
+                  /^\+?\d{1,4}?[-.\s]?\(?\d{1,3}?\)?[-.\s]?\d{1,4}[-.\s]?\d{1,4}[-.\s]?\d{1,9}$/,
+                message: " Wrong format, Provide valid email!",
+              },
+            })}
+          />
         </FormRow>
 
         <FormRow>
-          <Input placeholder="••••••••" />
+          <Input
+            placeholder="••••••••"
+            {...register("password", {
+              required: "This field is required",
+              minLength: {
+                value: 8,
+                message: `Password length should be greater than or equals 10 `,
+              },
+            })}
+          />
         </FormRow>
 
         <Button variation="auth"> Login to your account </Button>
