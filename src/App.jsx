@@ -9,10 +9,11 @@ import SignUp from "./pages/SignUp";
 import PageNotFound from "./pages/PageNotFound";
 import GlobalStyles from "./Styles/GlobalStyles";
 import TVSeries from "./pages/TVSeries";
+import { ViewPortProvider } from "./contexts/Viewport";
 
 function App() {
   return (
-    <>
+    <ViewPortProvider>
       <GlobalStyles />
       <BrowserRouter>
         <Routes>
@@ -29,7 +30,7 @@ function App() {
           <Route path="*" element={<PageNotFound />} />
         </Routes>
       </BrowserRouter>
-    </>
+    </ViewPortProvider>
   );
 }
 
