@@ -17,14 +17,14 @@ const StyledApp = styled.div`
 
     row-gap: ${() => clampBuilder(350, 950, 1.5, 3)};
 
-    grid-template-rows: 6rem 1fr;
+    grid-template-rows: 5rem 1fr;
   }
 `;
 
 const StyledMain = styled.main`
   padding: 2rem;
   grid-column: 2 / -1;
-  grid-row: 1 / -1;
+  grid-row: 2 / -1;
   overflow: auto;
 `;
 

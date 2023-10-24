@@ -15,7 +15,7 @@ const TrendingContainer = styled.div`
 
   scroll-snap-type: x mandatory;
 
-  column-gap: ${() => clampBuilder(320, 1200, 2, 3.5)};
+  column-gap: ${() => clampBuilder(320, 1200, 2, 3)};
 `;
 
 function TrendingGridLayout() {

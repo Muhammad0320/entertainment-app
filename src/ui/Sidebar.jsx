@@ -5,7 +5,7 @@ import Avatar from "./Avatar";
 import { clampBuilder } from "../Styles/clampBuilder";
 
 const StyledSidebar = styled.aside`
-  grid-row: 1 / -1;
+  /* grid-row: 1 / -1; */
   text-align: center;
   grid-column: 1 / 2;
   border-radius: 2.5rem;
@@ -17,7 +17,7 @@ const StyledSidebar = styled.aside`
 
   @media (max-width: 950px) {
     height: min-content;
-
+    grid-row: 1 / 2;
     padding: ${() => clampBuilder(350, 950, 1, 1.5)}
       ${() => clampBuilder(350, 950, 1.2, 2)};
 
