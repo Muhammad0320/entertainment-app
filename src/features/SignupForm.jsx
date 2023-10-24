@@ -44,6 +44,7 @@ function SignupForm() {
         <FormRow error={errors?.password?.message}>
           <Input
             placeholder="••••••••"
+            type="password"
             variation="auth"
             {...register("password", {
               required: "This field is required",
@@ -58,6 +59,7 @@ function SignupForm() {
         <FormRow error={errors?.passwordConfirm?.message}>
           <Input
             placeholder="••••••••"
+            type="password"
             variation="auth"
             {...register("passwordConfirm", {
               required: "This field is required",
