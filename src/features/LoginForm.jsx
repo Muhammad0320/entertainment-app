@@ -14,6 +14,8 @@ const StyledForm = styled.div`
   padding-inline: ${() => clampBuilder(350, 1200, 1.5, 2.5)};
 
   background-color: var(--color-blue-dark);
+
+  width: ${() => clampBuilder(350, 1200, 25, 45)};
 `;
 
 function LoginForm() {
@@ -33,6 +35,7 @@ function LoginForm() {
         <FormRow error={errors?.email?.message}>
           <Input
             placeholder="Email address"
+            variation="auth"
             {...register("email", {
               required: "This field is required",
               pattern: {
@@ -47,11 +50,12 @@ function LoginForm() {
         <FormRow error={errors?.password?.message}>
           <Input
             placeholder="••••••••"
+            variation="auth"
             {...register("password", {
               required: "This field is required",
               minLength: {
                 value: 8,
-                message: `Password length should be greater than or equals 10 `,
+                message: `Password length should be greater than or equals 8 `,
               },
             })}
           />
