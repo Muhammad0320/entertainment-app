@@ -22,7 +22,7 @@ function AlternativeAuthentication({ method }) {
   const methodText =
     method === "Login" ? "Don't have an account?" : "Already have an account?";
 
-  const to = method === "login" ? "/signup" : "/login";
+  const to = method === "Login" ? "/signup" : "/login";
 
   return (
     <StyledAuth>
