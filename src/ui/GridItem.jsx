@@ -54,16 +54,18 @@ const Figure = styled.figure`
     filter: brightness(80%);
   }
 
-  &:hover p {
+  &:hover figcaption {
     visibility: visible;
+    scale: 1;
   }
 `;
 
-const FigCaption = styled.p`
+const FigCaption = styled.figcaption`
   grid-column: 1 / -1;
   grid-row: 1 / 2;
   justify-self: center;
   align-self: center;
+  scale: 0.1;
   visibility: hidden;
 
   border-radius: ${() => clampBuilder(350, 1200, 1.5, 3)};
@@ -71,9 +73,11 @@ const FigCaption = styled.p`
   align-items: center;
   justify-content: center;
   column-gap: 1rem;
-  font-size: 2rem;
+  font-size: ${() => clampBuilder(350, 1200, 1, 2)};
   padding: 0.8rem 1.8rem;
   background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3));
+
+  transition: visibility 0.2s ease, scale 0.24s;
 `;
 
 const Icon = styled.p`

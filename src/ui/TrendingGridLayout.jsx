@@ -9,7 +9,7 @@ const TrendingContainer = styled.div`
   display: grid;
   grid-auto-flow: column;
 
-  grid-auto-columns: 37%;
+  grid-auto-columns: 47%;
 
   overflow-x: auto;
 
@@ -18,7 +18,7 @@ const TrendingContainer = styled.div`
   column-gap: ${() => clampBuilder(320, 1200, 2, 3)};
 
   @media (max-width: 900px) {
-    grid-auto-columns: 53%;
+    grid-auto-columns: 57%;
   }
 
   @media (max-width: 500px) {
