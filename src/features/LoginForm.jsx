@@ -6,14 +6,18 @@ import Button from "../ui/Button";
 import AlternativeAuthentication from "../ui/AlternativeAuthentication";
 import { useForm } from "react-hook-form";
 import { FormContainer } from "../ui/FormContainer";
+import { useNavigate } from "react-router-dom";
 
 function LoginForm() {
   const { register, formState, reset, handleSubmit } = useForm();
 
   const { errors } = formState;
 
+  const navigate = useNavigate();
+
   const onSubmit = () => {
     reset();
+    navigate("/home");
   };
 
   return (
