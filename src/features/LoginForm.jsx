@@ -44,6 +44,7 @@ function LoginForm() {
           <Input
             placeholder="••••••••"
             variation="auth"
+            type="password"
             {...register("password", {
               required: "This field is required",
               minLength: {
