@@ -62,7 +62,7 @@ input:disabled {
 
 
 
-/* Parent selector, finally 😃 */
+
 
 a {
   color: inherit;
@@ -81,7 +81,13 @@ h4,
 h5,
 h6 {
   overflow-wrap: break-word;
+
+  hyphens: auto;
+
   -webkit-hyphens: auto;
+
+
+
 }
 
 
