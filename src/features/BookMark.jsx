@@ -18,7 +18,7 @@ function BookMark() {
     <>
       <Heading> Bookmarked Movie </Heading>
 
-      <StyledList layout="repeat(auto-fit, minmax(25rem, 1fr))">
+      <StyledList layout="repeat(auto-fit, minmax(25rem, 1frrem))">
         {bookmarkedMovies.map((bookmark) => (
           <GridItem data={bookmark} key={bookmark.title} />
         ))}

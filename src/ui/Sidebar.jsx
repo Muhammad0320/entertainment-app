@@ -5,12 +5,11 @@ import Avatar from "./Avatar";
 import { clampBuilder } from "../Styles/clampBuilder";
 
 const StyledSidebar = styled.aside`
-  /* grid-row: 1 / -1; */
   text-align: center;
   grid-column: 1 / 2;
-  border-radius: 2.5rem;
+  border-radius: ${() => clampBuilder(350, 1200, 2, 2.5)};
   padding-block: ${() => clampBuilder(950, 1200, 2.5, 4)};
-  height: 100dvh;
+  height: 95dvh;
   background-color: var(--color-blue-dark);
   display: grid;
   grid-template-rows: 3.2rem repeat(4, min-content) 1fr;

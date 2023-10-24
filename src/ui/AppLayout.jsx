@@ -5,12 +5,10 @@ import { clampBuilder } from "../Styles/clampBuilder";
 
 const StyledApp = styled.div`
   min-height: 100dvh;
-  padding: 4rem;
+  padding: 3rem;
   padding-inline-end: 0;
   display: grid;
   grid-template-columns: 10rem 1fr;
-
-  column-gap: ${() => clampBuilder(350, 950, 2.5, 3.5)};
 
   @media (max-width: 950px) {
     grid-template-columns: none;
